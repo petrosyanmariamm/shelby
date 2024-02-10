@@ -1,0 +1,46 @@
+@use 'variables';
+
+.HotTours { 
+     
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 7rem;
+        text-align: center;
+        margin: 0;
+         img {
+             width: 100%;
+             box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+         }
+
+        .title{
+          margin: 1.2rem 0;
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+
+        .descr{
+          line-height: 1.5rem;
+          font-size: .9rem;
+        } 
+    }
+    .label{
+        color:variables.$black;
+    }
+    
+} 
+
+@media (max-width: 1060px) {
+    .HotTours {
+        .container {
+            padding: 0 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        
+    }
+}
+
+

@@ -1,0 +1,86 @@
+@use 'variables';
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 10rem auto 5rem auto;
+    position: relative;
+     
+    .right, .left{
+        box-shadow: .5rem .5rem .5rem 0 rgba(120, 115, 115, 0.2);
+        div{
+            border: 1px solid variables.$sky;
+            padding: .5rem;
+            font-size: 1rem;
+        }
+    }
+    .left{
+        div{
+            color: variables.$facebook-color;
+            font-weight: 600;
+        }
+    }
+    .right{
+        div{
+            color: variables.$sky;
+        }
+    }
+}
+.back{
+    position: absolute;
+    top: 6rem;
+    left: 2rem;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: .7rem .7rem;
+    color: variables.$slate; 
+    cursor: pointer;
+    transition: 1s;
+
+&:hover {
+    background-color: variables.$gold;
+    border-color: variables.$gold;
+    color: variables.$white;
+    transition: 1s;
+
+}
+
+}
+
+@media( max-width: 500px){
+    
+      .container{
+        margin: 10rem 2rem 5rem 2rem;
+        .left, .right{
+            div{
+                font-size: .8rem;
+            }
+        }
+      }  
+    
+}
+@media(max-width: 465px){
+    .container{
+        margin: 10rem .1rem 5rem .1rem;
+
+        .left, .right{
+            div{
+                font-size: .9rem;
+            }
+        }
+      } 
+}
+
+@media(max-width:350px){
+    .container{
+       
+        .left, .right{
+            div{
+                font-size: .7rem;
+            }
+        }
+      } 
+}
+

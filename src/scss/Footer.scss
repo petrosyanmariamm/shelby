@@ -1,0 +1,118 @@
+@use 'variables';
+
+.Footer{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: variables.$white;
+    background-color: variables.$darkGray;
+    div{
+        flex: 1;
+    }
+    .info{
+        img{
+            width: 4rem;
+        }
+        .content{
+            margin-top: 1rem;
+            font-size: .9rem;
+        }
+    }
+    .support{
+        margin-top: 3rem;
+
+       div{
+        margin-bottom: 1.5rem;
+       }
+    }
+    .links{
+        margin-top: 3rem;
+        .link{
+            color: variables.$white;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+            &:hover{
+                color: variables.$gold;
+            }
+        }
+    }
+}
+
+@media(max-width: 850px){
+    .Footer{
+        .info{
+            .content{
+                font-size: .8rem;
+            }
+            img{
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+        
+    }
+}
+
+@media(max-width: 788px){
+    .Footer{
+        .info{
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        .support{
+           
+           div{
+            margin-bottom: .5rem;
+            font-size: .9rem;
+           }
+        }
+    }
+}
+
+@media(max-width: 670px){
+    .Footer{
+       .info{
+          display: none;
+        } 
+     }
+}
+
+.Footer{
+    .support{
+        margin-top: 1rem;
+       div{
+        margin-bottom: 1rem;
+        font-size: .8rem;
+       
+       }
+    }
+    .links{
+        margin-top: 1rem;
+        font-size: .8rem;
+        .link{
+            font-size: .8rem;
+            
+        }
+    }
+}
+
+@media(max-width: 460px){
+    .Footer{
+        .support{
+           div{
+            font-size: .6rem;
+           }
+        }
+        .links{
+            .link{
+                font-size: .6rem;  
+            }
+        }
+    }
+}
+

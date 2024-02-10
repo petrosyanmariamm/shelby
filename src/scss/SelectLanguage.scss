@@ -1,0 +1,12 @@
+@use 'variables';
+
+
+select{
+    width: 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: variables.$lightGray;
+    }
+
+}

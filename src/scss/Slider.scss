@@ -1,0 +1,152 @@
+@use 'variables';
+
+.Slider {
+    width: 100%;
+    height: 100vh;
+
+    .slide {
+        background-attachment: fixed;
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: opacity linear .8s;
+
+        .title{
+            width: 65rem;
+            // text-align: center;
+            font-size: 5rem;
+            font-weight: 600;
+            color: variables.$white;
+            text-shadow: variables.$black;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .btn-slide {
+        width: 2rem;
+        height: 2rem;
+        background: none;
+        position: absolute;
+        top: 50%;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: variables.$white;
+
+        &:hover {
+            color: variables.$slate;
+        }
+    }
+
+    .btn-slide.prev {
+        left: 2rem;
+    }
+    
+    .btn-slide.next {
+        right: 2rem;
+    }
+
+    .container-circle {
+        display: flex;
+        gap: .5rem;
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .circle {
+            width: .7rem;
+            height: .7rem;
+            background: variables.$slate;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    
+        .circle.active {
+            background: variables.$gold;
+        }
+    }
+}
+
+
+
+@media (max-width: 1056px) {
+    .Slider {
+        .slide {
+            .title {
+                font-size: 4rem;
+                 width: 90%;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .Slider {
+        .slide {
+            .title {
+                width: 70%;
+                margin: 0 auto;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .Slider {
+        .slide {
+            .title {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .Slider {
+        .slide {
+            .title {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 1.5rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        .btn-slide {
+            display: none;
+        }
+
+        .container-circle {
+            bottom: 1.5rem;
+        }
+    }
+}
